@@ -1,2 +1,3 @@
 References:
-- https://leetcode.com
+- https://www.leetcode.com/
+- https://www.hackerrank.com/

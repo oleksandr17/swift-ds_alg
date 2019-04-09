@@ -22,6 +22,7 @@
 		11317FC2225C6B2100FEE0D3 /* PascalsTriangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11317FB5225C6B2100FEE0D3 /* PascalsTriangle.swift */; };
 		11317FC3225C6B2100FEE0D3 /* ReverseArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11317FB6225C6B2100FEE0D3 /* ReverseArray.swift */; };
 		11317FC4225C6B2100FEE0D3 /* Queue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11317FB7225C6B2100FEE0D3 /* Queue.swift */; };
+		11317FCD225C6E9E00FEE0D3 /* WarmUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11317FCC225C6E9E00FEE0D3 /* WarmUp.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,8 @@
 		11317FB5225C6B2100FEE0D3 /* PascalsTriangle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PascalsTriangle.swift; sourceTree = "<group>"; };
 		11317FB6225C6B2100FEE0D3 /* ReverseArray.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReverseArray.swift; sourceTree = "<group>"; };
 		11317FB7225C6B2100FEE0D3 /* Queue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Queue.swift; sourceTree = "<group>"; };
+		11317FC8225C6C4300FEE0D3 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		11317FCC225C6E9E00FEE0D3 /* WarmUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarmUp.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +61,7 @@
 		11317F8D225C6AAB00FEE0D3 = {
 			isa = PBXGroup;
 			children = (
+				11317FC8225C6C4300FEE0D3 /* README.md */,
 				11317F98225C6AAB00FEE0D3 /* swift-ds_alg */,
 				11317F97225C6AAB00FEE0D3 /* Products */,
 			);
@@ -74,19 +78,7 @@
 		11317F98225C6AAB00FEE0D3 /* swift-ds_alg */ = {
 			isa = PBXGroup;
 			children = (
-				11317FC5225C6B2500FEE0D3 /* Utils */,
-				11317FAD225C6B2100FEE0D3 /* BFS.swift */,
-				11317FAF225C6B2100FEE0D3 /* BinarySearch.swift */,
-				11317FAC225C6B2100FEE0D3 /* BinaryTree.swift */,
-				11317FB0225C6B2100FEE0D3 /* DFS.swift */,
-				11317FB1225C6B2100FEE0D3 /* KthGrammar.swift */,
-				11317FAB225C6B2100FEE0D3 /* Memoization.swift */,
-				11317FB5225C6B2100FEE0D3 /* PascalsTriangle.swift */,
-				11317FB7225C6B2100FEE0D3 /* Queue.swift */,
-				11317FB6225C6B2100FEE0D3 /* ReverseArray.swift */,
-				11317FB3225C6B2100FEE0D3 /* SinglyLinkedList.swift */,
-				11317FB2225C6B2100FEE0D3 /* Stack.swift */,
-				11317FAE225C6B2100FEE0D3 /* Tries.swift */,
+				11317FC9225C6C7300FEE0D3 /* ds_alg */,
 				11317F99225C6AAB00FEE0D3 /* AppDelegate.swift */,
 				11317FA0225C6AAD00FEE0D3 /* Assets.xcassets */,
 				11317FA5225C6AAD00FEE0D3 /* Info.plist */,
@@ -100,6 +92,43 @@
 				11317FB4225C6B2100FEE0D3 /* Coordinate.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		11317FC9225C6C7300FEE0D3 /* ds_alg */ = {
+			isa = PBXGroup;
+			children = (
+				11317FC5225C6B2500FEE0D3 /* Utils */,
+				11317FCA225C6E5400FEE0D3 /* Leetcode */,
+				11317FCB225C6E6500FEE0D3 /* Hackerrank */,
+			);
+			path = ds_alg;
+			sourceTree = "<group>";
+		};
+		11317FCA225C6E5400FEE0D3 /* Leetcode */ = {
+			isa = PBXGroup;
+			children = (
+				11317FAD225C6B2100FEE0D3 /* BFS.swift */,
+				11317FAF225C6B2100FEE0D3 /* BinarySearch.swift */,
+				11317FAC225C6B2100FEE0D3 /* BinaryTree.swift */,
+				11317FB0225C6B2100FEE0D3 /* DFS.swift */,
+				11317FB1225C6B2100FEE0D3 /* KthGrammar.swift */,
+				11317FAB225C6B2100FEE0D3 /* Memoization.swift */,
+				11317FB5225C6B2100FEE0D3 /* PascalsTriangle.swift */,
+				11317FB7225C6B2100FEE0D3 /* Queue.swift */,
+				11317FB6225C6B2100FEE0D3 /* ReverseArray.swift */,
+				11317FB3225C6B2100FEE0D3 /* SinglyLinkedList.swift */,
+				11317FB2225C6B2100FEE0D3 /* Stack.swift */,
+				11317FAE225C6B2100FEE0D3 /* Tries.swift */,
+			);
+			path = Leetcode;
+			sourceTree = "<group>";
+		};
+		11317FCB225C6E6500FEE0D3 /* Hackerrank */ = {
+			isa = PBXGroup;
+			children = (
+				11317FCC225C6E9E00FEE0D3 /* WarmUp.swift */,
+			);
+			path = Hackerrank;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -174,6 +203,7 @@
 				11317FC1225C6B2100FEE0D3 /* Coordinate.swift in Sources */,
 				11317FC4225C6B2100FEE0D3 /* Queue.swift in Sources */,
 				11317FC0225C6B2100FEE0D3 /* SinglyLinkedList.swift in Sources */,
+				11317FCD225C6E9E00FEE0D3 /* WarmUp.swift in Sources */,
 				11317FB8225C6B2100FEE0D3 /* Memoization.swift in Sources */,
 				11317FBF225C6B2100FEE0D3 /* Stack.swift in Sources */,
 				11317FC3225C6B2100FEE0D3 /* ReverseArray.swift in Sources */,

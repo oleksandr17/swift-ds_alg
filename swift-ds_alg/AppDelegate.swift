@@ -1,11 +1,3 @@
-//
-//  AppDelegate.swift
-//  swift-ds_alg
-//
-//  Created by Oleksandr  on 09/04/2019.
-//  Copyright © 2019 Oleksandr. All rights reserved.
-//
-
 import UIKit
 
 @UIApplicationMain
@@ -101,6 +93,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             BinarySearch.search([1,2,3,4,5,6,7,8,9], 5)
             BinarySearch.searchInRotatedArray([6,7,8,9,1,2,3,4,5], 5)
             BinarySearch.searchRange([1,2,3,3,3,3,4,5,9], 3)
+        }
+        
+        // Repeated string
+        do {
+            repeatedString(s: "a", n: 1000000000000)
         }
 
         return true
