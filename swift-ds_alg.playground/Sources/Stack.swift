@@ -82,7 +82,6 @@ public class MinStack {
  Output: true
  */
 public class ValidParenthesesSolution {
-    
     static private let couples = [("(",")"), ("{","}"), ("[","]")]
     
     public func isValid(_ s: String) -> Bool {
@@ -121,52 +120,6 @@ public class ValidParenthesesSolution {
             }
         }
         return false
-    }
-}
-
-/*
- You are given a list of non-negative integers, a1, a2, ..., an, and a target, S. Now you have 2 symbols + and -. For each integer, you should choose one from + and - as its new symbol.
- 
- Find out how many ways to assign symbols to make sum of integers equal to target S.
- 
- Example 1:
- Input: nums is [1, 1, 1, 1, 1], S is 3.
- Output: 5
- 
- Explanation:
- -1+1+1+1+1 = 3
- +1-1+1+1+1 = 3
- +1+1-1+1+1 = 3
- +1+1+1-1+1 = 3
- +1+1+1+1-1 = 3
- 
- There are 5 ways to assign symbols to make the sum of nums be target 3.
- */
-public class TargetSumSolution {
-    private enum Operation {
-        case plus
-        case minus
-    }
-    
-    public func findTargetSumWays(_ nums: [Int], _ S: Int) -> Int {
-        guard !nums.isEmpty else { return 0 }
-        return findTargetSumWays(nums, 0, .plus, S, 0) + findTargetSumWays(nums, 0, .minus, S, 0)
-    }
-    
-    private func findTargetSumWays(_ nums: [Int], _ index: Int, _ operation: Operation, _ target: Int, _ currentSum: Int) -> Int {
-        let value: Int
-        switch operation {
-        case .plus:
-            value = currentSum + nums[index]
-        case .minus:
-            value = currentSum - nums[index]
-        }
-        
-        guard index < (nums.count - 1) else { // last item
-            return (value == target) ? 1 : 0
-        }
-        
-        return findTargetSumWays(nums, index + 1, .plus, target, value) + findTargetSumWays(nums, index + 1, .minus, target, value)
     }
 }
 
