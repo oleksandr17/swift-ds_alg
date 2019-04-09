@@ -1,12 +1,12 @@
 import Foundation
 
 // Definition for a binary tree node.
-public class TreeNode {
-    public var val: Int
-    public var left: TreeNode?
-    public var right: TreeNode?
+class TreeNode {
+    var val: Int
+    var left: TreeNode?
+    var right: TreeNode?
     
-    public init(_ val: Int) {
+    init(_ val: Int) {
         self.val = val
         self.left = nil
         self.right = nil
@@ -15,7 +15,7 @@ public class TreeNode {
 
 class BinaryTreeSolution {
     // Traversal
-    public func preorderTraversal(_ root: TreeNode?) -> [Int] {
+    func preorderTraversal(_ root: TreeNode?) -> [Int] {
         guard let r = root else { return [] }
         let elements = [r.val]
         let leftElements = preorderTraversal(r.left)
@@ -40,7 +40,7 @@ class BinaryTreeSolution {
     }
     
     // Max depth
-    public func maxDepth(_ root: TreeNode?) -> Int {
+    func maxDepth(_ root: TreeNode?) -> Int {
         return maxDepth(root, 0)
     }
     
@@ -137,11 +137,11 @@ class BinarySearchTreeSolution {
      Implement an iterator over a binary search tree (BST). Your iterator will be initialized with the root node of a BST.
      Calling next() will return the next smallest number in the BST.
      */
-    public class BSTIterator {
+    class BSTIterator {
         
         private var values = [Int]()
         
-        public init(_ root: TreeNode?) {
+        init(_ root: TreeNode?) {
             BSTIterator.setupValuesInOrder(root, &values)
         }
         
@@ -153,14 +153,14 @@ class BinarySearchTreeSolution {
         }
         
         /** @return the next smallest number */
-        public func next() -> Int {
+        func next() -> Int {
             guard let first = values.first else { fatalError() }
             values.remove(at: 0)
             return first
         }
         
         /** @return whether we have a next smallest number */
-        public func hasNext() -> Bool {
+        func hasNext() -> Bool {
             return !values.isEmpty
         }
     }
@@ -185,7 +185,7 @@ class BinarySearchTreeSolution {
      
      Note that an empty tree is represented by NULL, therefore you would see the expected output (serialized tree format) as [], not null.
      */
-    public func searchBST(_ node: TreeNode?, _ val: Int) -> TreeNode? {
+    func searchBST(_ node: TreeNode?, _ val: Int) -> TreeNode? {
         guard let n = node else { return nil }
         
         if n.val == val {
@@ -205,7 +205,7 @@ class BinarySearchTreeSolution {
      
      Note that there may exist multiple valid ways for the insertion, as long as the tree remains a BST after insertion. You can return any of them.
      */
-    public func insertIntoBST(_ node: TreeNode?, _ val: Int) -> TreeNode? {
+    func insertIntoBST(_ node: TreeNode?, _ val: Int) -> TreeNode? {
         guard let n = node else { return node }
         guard n.val != val else { return node }
         
@@ -236,7 +236,7 @@ class BinarySearchTreeSolution {
      
      Note: Time complexity should be O(height of tree).
      */
-    public func deleteNode(_ node: TreeNode?, _ key: Int) -> TreeNode? {
+    func deleteNode(_ node: TreeNode?, _ key: Int) -> TreeNode? {
         guard let n = node else { return nil }
         return _deleteNode(n, nil, key)
     }

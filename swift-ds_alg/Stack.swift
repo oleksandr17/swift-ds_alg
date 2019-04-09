@@ -18,11 +18,11 @@ import Foundation
  minStack.top();      --> Returns 0.
  minStack.getMin();   --> Returns -2.
  */
-public class MinStack {
+class MinStack {
     private var values = [Int]()
     private var auxiliaryValues = [Int]()
     
-    public func push(_ x: Int) {
+    func push(_ x: Int) {
         values.append(x)
         
         if let lastAuxiliary = auxiliaryValues.last {
@@ -36,17 +36,17 @@ public class MinStack {
         }
     }
     
-    public func pop() {
+    func pop() {
         _ = values.popLast()
         _ = auxiliaryValues.popLast()
     }
     
-    public func top() -> Int {
+    func top() -> Int {
         guard let last = values.last else { return -1 }
         return last
     }
     
-    public func getMin() -> Int {
+    func getMin() -> Int {
         guard let lastAuxiliary = auxiliaryValues.last else { return -1 }
         return lastAuxiliary
     }
@@ -81,10 +81,10 @@ public class MinStack {
  Input: "{[]}"
  Output: true
  */
-public class ValidParenthesesSolution {
+class ValidParenthesesSolution {
     static private let couples = [("(",")"), ("{","}"), ("[","]")]
     
-    public func isValid(_ s: String) -> Bool {
+    func isValid(_ s: String) -> Bool {
         var stack = [Character]()
         for c in s {
             if isStart(c: c) {
@@ -137,8 +137,8 @@ public class ValidParenthesesSolution {
  s = "3[a2[c]]", return "accaccacc".
  s = "2[abc]3[cd]ef", return "abcabccdcdcdef".
  */
-public class DecodeStringSolution {
-    public func decodeString(_ s: String) -> String {
+class DecodeStringSolution {
+    func decodeString(_ s: String) -> String {
         let allowedDigits = Set(["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"])
         var digits = [Int]()
         var symbols = [String]()

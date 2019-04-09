@@ -1,6 +1,6 @@
 import Foundation
 
-public class NumIslandsSolution {
+class NumIslandsSolution {
     
     /*
      Number of Islands
@@ -23,7 +23,7 @@ public class NumIslandsSolution {
      00011
      Output: 3
      */
-    public func numIslands(_ grid: [[Character]]) -> Int {
+    func numIslands(_ grid: [[Character]]) -> Int {
         let rowsCount = grid.count
         guard rowsCount > 0 else { return 0 }
         let columnsCount = grid[0].count
@@ -80,13 +80,13 @@ public class NumIslandsSolution {
  
  There are 5 ways to assign symbols to make the sum of nums be target 3.
  */
-public class TargetSumSolution {
+class TargetSumSolution {
     private enum Operation {
         case plus
         case minus
     }
     
-    public func findTargetSumWays(_ nums: [Int], _ S: Int) -> Int {
+    func findTargetSumWays(_ nums: [Int], _ S: Int) -> Int {
         guard !nums.isEmpty else { return 0 }
         return findTargetSumWays(nums, 0, .plus, S, 0) + findTargetSumWays(nums, 0, .minus, S, 0)
     }

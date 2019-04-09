@@ -1,15 +1,15 @@
 import Foundation
 
-public struct Coordinate {
-    public let row: Int
-    public let column: Int
+struct Coordinate {
+    let row: Int
+    let column: Int
     
-    public init(row: Int, column: Int) {
+    init(row: Int, column: Int) {
         self.row = row
         self.column = column
     }
     
-    public func neighbours(rowsCount: Int, columnsCount: Int) -> [Coordinate] {
+    func neighbours(rowsCount: Int, columnsCount: Int) -> [Coordinate] {
         var result = [Coordinate]()
         if let t = top() {
             result.append(t)

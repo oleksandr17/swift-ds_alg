@@ -2,17 +2,17 @@ import Foundation
 
 
 // Definition for singly-linked list.
-public class ListNode {
+class ListNode {
     
-    public var val: Int
-    public var next: ListNode?
+    var val: Int
+    var next: ListNode?
     
-    public init(_ val: Int) {
+    init(_ val: Int) {
         self.val = val
         self.next = nil
     }
     
-    public func values() -> [Int] {
+    func values() -> [Int] {
         return [val] + (next?.values() ?? [Int]())
     }
     
@@ -23,7 +23,7 @@ public class ListNode {
      Example:
      Given 1->2->3->4, you should return the list as 2->1->4->3.
      */
-    public func swapPairs() -> ListNode {
+    func swapPairs() -> ListNode {
         let first = self
         guard let second = first.next else { return first }
         let third = second.next // optional
@@ -40,7 +40,7 @@ public class ListNode {
      Input: 1->2->3->4->5->NULL
      Output: 5->4->3->2->1->NULL
      */
-    public func reverseList() -> ListNode {
+    func reverseList() -> ListNode {
         return reversed(first: nil, second: self)
     }
     
@@ -58,7 +58,7 @@ public class ListNode {
      Input: 1->2->4, 1->3->4
      Output: 1->1->2->3->4->4
      */
-    public static func mergeTwoLists(_ l1: ListNode?, _ l2: ListNode?) -> ListNode? {
+    static func mergeTwoLists(_ l1: ListNode?, _ l2: ListNode?) -> ListNode? {
         var list1 = l1
         var list2 = l2
         

@@ -1,6 +1,6 @@
 import Foundation
 
-public class ZeroOneMatrixSolution {
+class ZeroOneMatrixSolution {
     /*
      01 Matrix
 
@@ -32,7 +32,7 @@ public class ZeroOneMatrixSolution {
      There are at least one 0 in the given matrix.
      The cells are adjacent in only four directions: up, down, left and right.
      */
-    public func updateMatrix(_ matrix: [[Int]]) -> [[Int]] {
+    func updateMatrix(_ matrix: [[Int]]) -> [[Int]] {
         var result = matrix
         
         let rowsCount = matrix.count

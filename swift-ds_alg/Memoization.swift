@@ -1,6 +1,6 @@
 import Foundation
 
-public class Memoization {
+class Memoization {
     
     /*
      The Fibonacci numbers, commonly denoted F(n) form a sequence, called the Fibonacci sequence, such that each number is the sum of the two preceding ones, starting from 0 and 1. That is,
@@ -23,7 +23,7 @@ public class Memoization {
      Output: 3
      Explanation: F(4) = F(3) + F(2) = 2 + 1 = 3.
      */
-    public static func fib(_ N: Int) -> Int {
+    static func fib(_ N: Int) -> Int {
         var cache = [Int: Int]()
         return fib(N, &cache)
     }
@@ -64,7 +64,7 @@ public class Memoization {
      2. 1 step + 2 steps
      3. 2 steps + 1 step
      */
-    public static func climbStairs(_ n: Int) -> Int {
+    static func climbStairs(_ n: Int) -> Int {
         var cache = [Int: Int]()
         return climbStairs(n, &cache)
     }

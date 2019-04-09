@@ -1,6 +1,6 @@
 import Foundation
 
-public class BinarySearch {
+class BinarySearch {
     
     /*
      Given a sorted (in ascending order) integer array nums of n elements and a target value, write a function to search target in nums. If target exists, then return its index, otherwise return -1.
@@ -15,7 +15,7 @@ public class BinarySearch {
      Output: -1
      Explanation: 2 does not exist in nums so return -1
      */
-    public static func search(_ nums: [Int], _ target: Int) -> Int {
+    static func search(_ nums: [Int], _ target: Int) -> Int {
         return _search(nums, target, 0, nums.count-1)
     }
     
@@ -54,7 +54,7 @@ public class BinarySearch {
      
      Solution reference: https://www.geeksforgeeks.org/search-an-element-in-a-sorted-and-pivoted-array/
      */
-    public static func searchInRotatedArray(_ nums: [Int], _ target: Int) -> Int {
+    static func searchInRotatedArray(_ nums: [Int], _ target: Int) -> Int {
         guard !nums.isEmpty else { return -1 }
         
         let pivot = _findPivotInRotatedArray(nums, 0, nums.count-1)
@@ -110,7 +110,7 @@ public class BinarySearch {
      
      Your solution should be in logarithmic complexity.
      */
-    public static func findPeakElement(_ nums: [Int]) -> Int {
+    static func findPeakElement(_ nums: [Int]) -> Int {
         return _findPeakElement(nums, 0, nums.count-1)
     }
     
@@ -160,7 +160,7 @@ public class BinarySearch {
      Input: nums = [5,7,7,8,8,10], target = 6
      Output: [-1,-1]
      */
-    public static func searchRange(_ nums: [Int], _ target: Int) -> [Int] {
+    static func searchRange(_ nums: [Int], _ target: Int) -> [Int] {
         return _searchRange(nums, target, 0, nums.count-1)
     }
     
@@ -213,7 +213,7 @@ public class BinarySearch {
     }
     
     // Square root
-    public static func sqrt(_ x: Int) -> Int {
+    static func sqrt(_ x: Int) -> Int {
         if x == 1 || x == 0 {
             return x
         }
@@ -232,7 +232,7 @@ public class BinarySearch {
     }
     
     // Power
-    public static func pow(_ x: Double, _ n: Int) -> Double {
+    static func pow(_ x: Double, _ n: Int) -> Double {
         var result = _pow(x, UInt(abs(n)))
         if n <= 0 {
             result = 1 / result

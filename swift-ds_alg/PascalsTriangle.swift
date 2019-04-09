@@ -1,9 +1,9 @@
 import Foundation
 
-public class PascalsTriangle {
+class PascalsTriangle {
     
     // Generate
-    public static func generate(_ numRows: Int) -> [[Int]] {
+    static func generate(_ numRows: Int) -> [[Int]] {
         var result = [[Int]]()
         var parentRowItems: [Int]?
         for row in 0..<numRows {
@@ -33,7 +33,7 @@ public class PascalsTriangle {
     }
     
     // Get row
-    public static func getRowElements(_ row: Int) -> [Int] {
+    static func getRowElements(_ row: Int) -> [Int] {
         var result = [Int]()
         var cache = [String: Int]()
         for column in 0...row {

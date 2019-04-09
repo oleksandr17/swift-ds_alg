@@ -1,6 +1,6 @@
 import Foundation
 
-public class KthGrammarSolution {
+class KthGrammarSolution {
     
     /*
      Examples:
@@ -22,7 +22,7 @@ public class KthGrammarSolution {
      row 3: 0110
      row 4: 01101001
      */
-    public static func kthGrammarSlow(_ N: Int, _ K: Int) -> Int {
+    static func kthGrammarSlow(_ N: Int, _ K: Int) -> Int {
         return sequence(N)[K-1]
     }
     
@@ -45,7 +45,7 @@ public class KthGrammarSolution {
     }
     
     //
-    public static func kthGrammarFast(_ N: Int, _ K: Int) -> Int {
+    static func kthGrammarFast(_ N: Int, _ K: Int) -> Int {
         let indices = getIndices(N, K)
         var previousSymbol = 0
         for index in indices {

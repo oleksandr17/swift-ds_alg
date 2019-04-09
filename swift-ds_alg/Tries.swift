@@ -1,6 +1,6 @@
 import Foundation
 
-public class Trie {
+class Trie {
  
     private var children = [Character: Trie]()
     private var holdsCompleteWord = false
@@ -26,7 +26,7 @@ public class Trie {
     }
     
     /** Inserts a word into the trie. */
-    public func insert(_ word: String) {
+    func insert(_ word: String) {
         guard let firstCharacter = word.first else {
             holdsCompleteWord = true
             return
@@ -47,19 +47,19 @@ public class Trie {
     }
     
     /** Returns if the word is in the trie. */
-    public func search(_ word: String) -> Bool {
+    func search(_ word: String) -> Bool {
         guard let subTrie = self.subTrie(word) else { return false }
         return subTrie.holdsCompleteWord
     }
     
     /** Returns if there is any word in the trie that starts with the given prefix. */
-    public func startsWith(_ prefix: String) -> Bool {
+    func startsWith(_ prefix: String) -> Bool {
         guard let _ = self.subTrie(prefix) else { return false }
         return true
     }
 }
 
-public class MapSum {
+class MapSum {
     
     private var children = [Character: MapSum]()
     private var val = 0
@@ -85,7 +85,7 @@ public class MapSum {
         return child.subMapSum(remainingKey)
     }
     
-    public func insert(_ key: String, _ val: Int) {
+    func insert(_ key: String, _ val: Int) {
         var resetChildren = false
         if let subMapSum = self.subMapSum(key), subMapSum.holdsCompleteKey {
             resetChildren = true
@@ -110,7 +110,7 @@ public class MapSum {
         child.holdsCompleteKey = true
     }
     
-    public func sum(_ prefix: String) -> Int {
+    func sum(_ prefix: String) -> Int {
         if let subMapSum = self.subMapSum(prefix) {
             return subMapSum.val
         }
@@ -118,8 +118,8 @@ public class MapSum {
     }
 }
 
-public class TriesSolution {
-    public func replaceWords(_ dict: [String], _ sentence: String) -> String {
+class TriesSolution {
+    func replaceWords(_ dict: [String], _ sentence: String) -> String {
         let trie = Trie()
         for item in dict {
             trie.insert(item)
