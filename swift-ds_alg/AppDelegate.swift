@@ -2,13 +2,11 @@ import UIKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
+    
     var window: UIWindow?
-
-
+    
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        
-        // Reverse array
         do {
             var ints1 = [1,2,3,4,5]
             ReverseArray.reverseArray(&ints1)
@@ -16,7 +14,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             ReverseArray.reverseArray(&ints2)
         }
         
-        // Swap pairs of list nodes
         do {
             let node4 = ListNode(4)
             let node3 = ListNode(3)
@@ -30,7 +27,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             swappedNode.values()
         }
         
-        // Reverse list nodes
         do {
             let node4 = ListNode(4)
             let node3 = ListNode(3)
@@ -44,19 +40,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             reversedNode.values()
         }
         
-        // Pascal's Triangle
         do {
             PascalsTriangle.generate(5)
             PascalsTriangle.getRowElements(4)
         }
         
-        // Memoization
         do {
             Memoization.fib(10)
             Memoization.climbStairs(6)
         }
         
-        // Merge Two Sorted Lists
         do {
             let node14 = ListNode(4)
             
@@ -79,14 +72,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             newRootNode?.values()
         }
         
-        //  K-th Symbol in Grammar
-        
         do {
             KthGrammarSolution.kthGrammarSlow(3, 3)
             KthGrammarSolution.kthGrammarFast(10000, 1)
         }
         
-        // Binary search
         do {
             BinarySearch.pow(2, 10)
             BinarySearch.sqrt(10)
@@ -95,11 +85,32 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             BinarySearch.searchRange([1,2,3,3,3,3,4,5,9], 3)
         }
         
-        // Repeated string
         do {
-            repeatedString(s: "a", n: 1000000000000)
+            HRWarmUp().repeatedString(s: "a", n: 1000000000000)
         }
-
-        return true
+        
+        do {
+            print("sherlockAndAnagrams = ", HRHashTables().sherlockAndAnagrams(s: "abba"))
+            
+            print("countTriplets = ", HRHashTables().countTriplets(arr: [1, 5, 5, 25, 125], r: 5))
+            print("countTriplets = ", HRHashTables().countTriplets(arr: [1, 3, 9, 9, 27, 81], r: 3))
+            print("countTriplets = ", HRHashTables().countTriplets(arr: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1], r: 1))
+        }
+        
+        do {
+            HRSorting().countSwaps(a: [3,2,1])
+        }
+        
+        do {
+            let arr1 = [15,3,9,8,5,2,7,1,6]
+            let arr2 = arr1.quicksort()
+            print("Quick sort: \(arr2)")
+        }
+        
+        do {
+            print("makeAnagram = ", HRStrings().makeAnagram(a: "fcrxzwscanmligyxyvym", b: "jxwtrhvujlmrpdoqbisbwhmgpmeoke"))
+        }
+        
+        exit(1)
     }
 }
