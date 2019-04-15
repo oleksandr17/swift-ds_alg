@@ -109,6 +109,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         do {
             print("makeAnagram = ", HRStrings().makeAnagram(a: "fcrxzwscanmligyxyvym", b: "jxwtrhvujlmrpdoqbisbwhmgpmeoke"))
+           
+            print("isValid = ", HRStrings().isValid(s: "abcdefghhgfedecba"))
+            print("isValid = ", HRStrings().isValid(s: "ibfdgaeadiaefgbhbdghhhbgdfgeiccbiehhfcggchgghadhdhagfbahhddgghbdehidbibaeaagaeeigffcebfbaieggabcfbiiedcabfihchdfabifahcbhagccbdfifhghcadfiadeeaheeddddiecaicbgigccageicehfdhdgafaddhffadigfhhcaedcedecafeacbdacgfgfeeibgaiffdehigebhhehiaahfidibccdcdagifgaihacihadecgifihbebffebdfbchbgigeccahgihbcbcaggebaaafgfedbfgagfediddghdgbgehhhifhgcedechahidcbchebheihaadbbbiaiccededchdagfhccfdefigfibifabeiaccghcegfbcghaefifbachebaacbhbfgfddeceababbacgffbagidebeadfihaefefegbghgddbbgddeehgfbhafbccidebgehifafgbghafacgfdccgifdcbbbidfifhdaibgigebigaedeaaiadegfefbhacgddhchgcbgcaeaieiegiffchbgbebgbehbbfcebciiagacaiechdigbgbghefcahgbhfibhedaeeiffebdiabcifgccdefabccdghehfibfiifdaicfedagahhdcbhbicdgibgcedieihcichadgchgbdcdagaihebbabhibcihicadgadfcihdheefbhffiageddhgahaidfdhhdbgciiaciegchiiebfbcbhaeagccfhbfhaddagnfieihghfbaggiffbbfbecgaiiidccdceadbbdfgigibgcgchafccdchgifdeieicbaididhfcfdedbhaadedfageigfdehgcdaecaebebebfcieaecfagfdieaefdiedbcadchabhebgehiidfcgahcdhcdhgchhiiheffiifeegcfdgbdeffhgeghdfhbfbifgidcafbfcd"))
+        }
+        
+        do {
+            HRSearch().whatFlavors(cost: [1, 4, 5, 3, 2], money: 4)
+            HRSearch().whatFlavors(cost: [2, 2, 4, 3], money: 4)
+            HRSearch().whatFlavors(cost: [4, 3, 2, 5, 7], money: 8)
+        }
+        
+        do {
+            print("minimumAbsoluteDifference = ", HRGreedyAlgorithms().minimumAbsoluteDifference(arr: [3, -7, 0]))
+            
+            print("maxMin = ", HRGreedyAlgorithms().maxMin(k: 3, arr: [10, 100, 300, 200, 1000, 20, 30]))
+            print("maxMin = ", HRGreedyAlgorithms().maxMin(k: 4, arr: [1, 2, 3, 4, 10, 20, 30, 40, 100, 200]))
+            print("maxMin = ", HRGreedyAlgorithms().maxMin(k: 3, arr: [100, 200, 300, 350, 400, 401, 402]))
         }
         
         exit(1)

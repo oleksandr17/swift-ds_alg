@@ -14,12 +14,6 @@ class HRArrays {
     /*
      https://www.hackerrank.com/challenges/new-year-chaos/problem?h_l=interview&playlist_slugs%5B%5D=interview-preparation-kit&playlist_slugs%5B%5D=arrays
      */
-    private func shiftMinimumBribesIndex(index: Int, shifts: Int) -> Int {
-        guard shifts > 0 else { fatalError("Incorrect amount of shifts") }
-        let result = index - shifts
-        return (result >= 0) ? result : 0
-    }
-    
     func minimumBribes(q: [Int]) -> Void {
         var arr = q
         var count = 0
@@ -48,6 +42,12 @@ class HRArrays {
             }
         }
         print(count)
+    }
+    
+    private func shiftMinimumBribesIndex(index: Int, shifts: Int) -> Int {
+        guard shifts > 0 else { fatalError("Incorrect amount of shifts") }
+        let result = index - shifts
+        return (result >= 0) ? result : 0
     }
     
     /*

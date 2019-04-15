@@ -30,4 +30,63 @@ class HRStrings {
         
         return count
     }
+    
+    /*
+     https://www.hackerrank.com/challenges/sherlock-and-valid-string/problem?h_l=interview&playlist_slugs%5B%5D=interview-preparation-kit&playlist_slugs%5B%5D=strings
+     */
+    func isValid(s: String) -> String {
+        let occurences = s.reduce(into: [Character: Int]()) { (result, c) in
+            result[c, default: 0] += 1
+        }
+        let counts = occurences.reduce(into: [Int: Int]()) { (result, keyValue) in
+            result[keyValue.value, default: 0] += 1
+        }
+        
+        switch counts.count {
+        case 0:
+            return "YES"
+        case 1:
+            return "YES"
+        case 2: // FIXME: refactor
+            var key0: Int!
+            var key1: Int!
+            var value0: Int!
+            var value1: Int!
+            
+            var index = 0
+            for (key, value) in counts {
+                switch index {
+                case 0:
+                    key0 = key
+                    value0 = value
+                case 1:
+                    key1 = key
+                    value1 = value
+                default:
+                    fatalError()
+                }
+                index += 1
+            }
+            
+            if value0 == 1 {
+                if (key0 - 1) == key1 {
+                    return "YES"
+                } else if (key0 - 1) == 0 {
+                    return "YES"
+                }
+                return "NO"
+            } else if value1 == 1 {
+                if (key1 - 1) == key0 {
+                    return "YES"
+                } else if (key1 - 1) == 0 {
+                    return "YES"
+                }
+                return "NO"
+            } else {
+                return "NO"
+            }
+        default:
+            return "NO"
+        }
+    }
 }

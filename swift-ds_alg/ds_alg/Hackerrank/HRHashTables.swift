@@ -62,7 +62,7 @@ class HRHashTables {
      https://www.hackerrank.com/challenges/count-triplets-1/problem?h_l=interview&playlist_slugs%5B%5D=interview-preparation-kit&playlist_slugs%5B%5D=dictionaries-hashmaps
      */
     func countTriplets(arr: [Int], r: Int) -> Int {
-        if true { // FIXME: wrong
+        if true { // TODO: doesn't work
             var options = [[Int]]()
             var counts  = [Int: Int]()
             var visitedValues = Set<Int>()
