@@ -134,17 +134,8 @@
 			isa = PBXGroup;
 			children = (
 				118D662A226458B600FF01DD /* DS */,
-				11317FAF225C6B2100FEE0D3 /* BinarySearch.swift */,
-				11317FAC225C6B2100FEE0D3 /* BinaryTree.swift */,
-				11317FAD225C6B2100FEE0D3 /* BFS.swift */,
-				11317FB0225C6B2100FEE0D3 /* DFS.swift */,
-				11317FB1225C6B2100FEE0D3 /* KthGrammar.swift */,
-				11317FAB225C6B2100FEE0D3 /* Memoization.swift */,
-				11317FB5225C6B2100FEE0D3 /* PascalsTriangle.swift */,
-				11317FB6225C6B2100FEE0D3 /* ReverseArray.swift */,
-				11317FB2225C6B2100FEE0D3 /* Stack.swift */,
-				11317FAE225C6B2100FEE0D3 /* Tries.swift */,
-				11AFBC9522684BB900B8CF32 /* LCArray.swift */,
+				11AFBC9A2269A33500B8CF32 /* TopInterviewQuestions */,
+				11AFBC9C2269A36F00B8CF32 /* Misc */,
 			);
 			path = Leetcode;
 			sourceTree = "<group>";
@@ -152,13 +143,7 @@
 		11317FCB225C6E6500FEE0D3 /* Hackerrank */ = {
 			isa = PBXGroup;
 			children = (
-				11317FCC225C6E9E00FEE0D3 /* HRWarmUp.swift */,
-				114EB230225DBE9600C341C1 /* HRArrays.swift */,
-				11EE4A91225FC1CD006E86E4 /* HRHashTables.swift */,
-				118D661A2262110800FF01DD /* HRSorting.swift */,
-				118D661E2262610F00FF01DD /* HRStrings.swift */,
-				118D6620226351B200FF01DD /* HRSearch.swift */,
-				118D66222263705D00FF01DD /* HRGreedyAlgorithms.swift */,
+				11AFBC9B2269A35C00B8CF32 /* InterviewPreparationKit */,
 			);
 			path = Hackerrank;
 			sourceTree = "<group>";
@@ -173,6 +158,45 @@
 				118D662B226458EC00FF01DD /* Trie.swift */,
 			);
 			path = DS;
+			sourceTree = "<group>";
+		};
+		11AFBC9A2269A33500B8CF32 /* TopInterviewQuestions */ = {
+			isa = PBXGroup;
+			children = (
+				11AFBC9522684BB900B8CF32 /* LCArray.swift */,
+			);
+			path = TopInterviewQuestions;
+			sourceTree = "<group>";
+		};
+		11AFBC9B2269A35C00B8CF32 /* InterviewPreparationKit */ = {
+			isa = PBXGroup;
+			children = (
+				11317FCC225C6E9E00FEE0D3 /* HRWarmUp.swift */,
+				114EB230225DBE9600C341C1 /* HRArrays.swift */,
+				11EE4A91225FC1CD006E86E4 /* HRHashTables.swift */,
+				118D661A2262110800FF01DD /* HRSorting.swift */,
+				118D661E2262610F00FF01DD /* HRStrings.swift */,
+				118D6620226351B200FF01DD /* HRSearch.swift */,
+				118D66222263705D00FF01DD /* HRGreedyAlgorithms.swift */,
+			);
+			path = InterviewPreparationKit;
+			sourceTree = "<group>";
+		};
+		11AFBC9C2269A36F00B8CF32 /* Misc */ = {
+			isa = PBXGroup;
+			children = (
+				11317FAD225C6B2100FEE0D3 /* BFS.swift */,
+				11317FAF225C6B2100FEE0D3 /* BinarySearch.swift */,
+				11317FAC225C6B2100FEE0D3 /* BinaryTree.swift */,
+				11317FB0225C6B2100FEE0D3 /* DFS.swift */,
+				11317FB1225C6B2100FEE0D3 /* KthGrammar.swift */,
+				11317FAB225C6B2100FEE0D3 /* Memoization.swift */,
+				11317FB5225C6B2100FEE0D3 /* PascalsTriangle.swift */,
+				11317FB6225C6B2100FEE0D3 /* ReverseArray.swift */,
+				11317FB2225C6B2100FEE0D3 /* Stack.swift */,
+				11317FAE225C6B2100FEE0D3 /* Tries.swift */,
+			);
+			path = Misc;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
