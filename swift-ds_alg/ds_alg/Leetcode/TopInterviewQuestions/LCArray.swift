@@ -101,16 +101,13 @@ class LCArray {
      */
     func plusOne(_ digits: [Int]) -> [Int] {
         var result = [Int]()
-        var didAddOne = false
-        var remainder = 0
+        var remainder = 1
         for i in (0..<digits.count).reversed() {
             let digit = digits[i]
-            let value = digit + remainder + (didAddOne ? 0 : 1)
-            remainder = 0
-            didAddOne = true
+            let value = digit + remainder
             let newDigit = value % 10
-            remainder = value / 10
             result.insert(newDigit, at: 0)
+            remainder = value / 10
         }
         
         if remainder > 0 {
@@ -118,5 +115,67 @@ class LCArray {
         }
         
         return result
+    }
+    
+    /*
+     https://leetcode.com/explore/interview/card/top-interview-questions-easy/92/array/567/
+     */
+    func moveZeroes(_ nums: inout [Int]) {
+        // Find indices of zeros
+        var indices  = [Int]()
+        var index = 0
+        for num in nums {
+            if num == 0 {
+                indices.append(index)
+            }
+            index += 1
+        }
+        
+        // Modify `nums`
+        var shiftsCount = 0
+        for index in indices {
+            let newIndex = index - shiftsCount
+            nums.remove(at: newIndex)
+            nums.append(0)
+            shiftsCount += 1
+        }
+    }
+    
+    /*
+     https://leetcode.com/explore/interview/card/top-interview-questions-easy/92/array/546/
+     */
+    func twoSum(_ nums: [Int], _ target: Int) -> [Int] {
+        if true {
+            /*
+             Complexity Analysis:
+             Time complexity : O(n). We traverse the list containing n elements only once. Each look up in the table costs only O(1) time.
+             Space complexity : O(n). The extra space required depends on the number of items stored in the hash table, which stores at most nn elements.
+             */
+            var dict = [Int: Int]()
+            for index in 0..<nums.count {
+                let value = nums[index]
+                let remainder = target - value
+                if let anotherIndex = dict[remainder] {
+                    return [anotherIndex, index]
+                }
+                dict[value] = index
+            }
+            return [-1, -1]
+        }
+        else { // Brute force
+            /*
+             Complexity Analysis:
+             Time complexity : O(n^2)
+             Space complexity : O(1)
+             */
+            for i in 0..<(nums.count-1) {
+                for j in i+1..<nums.count {
+                    if nums[i] + nums[j] == target {
+                        return [i, j]
+                    }
+                }
+            }
+            return [-1, -1]
+        }
     }
 }
