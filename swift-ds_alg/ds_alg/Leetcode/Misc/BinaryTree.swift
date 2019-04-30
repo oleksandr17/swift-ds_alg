@@ -268,7 +268,6 @@ class BinarySearchTreeSolution {
                 } else {
                     fatalError("There must be 1 child")
                 }
-                return parent
                 
             default: // 2 child nodes
                 guard let childRight = node.right else { fatalError("There must be right child") }

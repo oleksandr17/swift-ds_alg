@@ -24,7 +24,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             node1.next = node2
             
             let swappedNode = node1.swapPairs()
-            swappedNode.values()
+            _ = swappedNode.values()
         }
         
         do {
@@ -37,17 +37,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             node1.next = node2
             
             let reversedNode = node1.reverseList()
-            reversedNode.values()
+            _ = reversedNode.values()
         }
         
         do {
-            PascalsTriangle.generate(5)
-            PascalsTriangle.getRowElements(4)
+            _ = PascalsTriangle.generate(5)
+            _ = PascalsTriangle.getRowElements(4)
         }
         
         do {
-            Memoization.fib(10)
-            Memoization.climbStairs(6)
+            _ = Memoization.fib(10)
+            _ = Memoization.climbStairs(6)
         }
         
         do {
@@ -69,24 +69,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             node21.next = node23
             
             let newRootNode = ListNode.mergeTwoLists(node11, node21)
-            newRootNode?.values()
+            _ = newRootNode?.values()
         }
         
         do {
-            KthGrammarSolution.kthGrammarSlow(3, 3)
-            KthGrammarSolution.kthGrammarFast(10000, 1)
+            _ = KthGrammarSolution.kthGrammarSlow(3, 3)
+            _ = KthGrammarSolution.kthGrammarFast(10000, 1)
         }
         
         do {
-            BinarySearch.pow(2, 10)
-            BinarySearch.sqrt(10)
-            BinarySearch.search([1,2,3,4,5,6,7,8,9], 5)
-            BinarySearch.searchInRotatedArray([6,7,8,9,1,2,3,4,5], 5)
-            BinarySearch.searchRange([1,2,3,3,3,3,4,5,9], 3)
+            _ = BinarySearch.pow(2, 10)
+            _ = BinarySearch.sqrt(10)
+            _ = BinarySearch.search([1,2,3,4,5,6,7,8,9], 5)
+            _ = BinarySearch.searchInRotatedArray([6,7,8,9,1,2,3,4,5], 5)
+            _ = BinarySearch.searchRange([1,2,3,3,3,3,4,5,9], 3)
         }
         
         do {
-            HRWarmUp().repeatedString(s: "a", n: 1000000000000)
+            _ = HRWarmUp().repeatedString(s: "a", n: 1000000000000)
         }
         
         do {
