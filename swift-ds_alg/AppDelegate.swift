@@ -128,6 +128,39 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             print("maxMin = ", HRGreedyAlgorithms().maxMin(k: 3, arr: [100, 200, 300, 350, 400, 401, 402]))
         }
         
+        do {
+            let isValidSudoku = LCArray().isValidSudoku([
+                ["8","3",".",".","7",".",".",".","."],
+                ["6",".",".","1","9","5",".",".","."],
+                [".","9","8",".",".",".",".","6","."],
+                ["8",".",".",".","6",".",".",".","3"],
+                ["4",".",".","8",".","3",".",".","1"],
+                ["7",".",".",".","2",".",".",".","6"],
+                [".","6",".",".",".",".","2","8","."],
+                [".",".",".","4","1","9",".",".","5"],
+                [".",".",".",".","8",".",".","7","9"]
+                ]) // first section contains 8 twice
+            print("Is valid sudoku: \(isValidSudoku)")
+        }
+        
+        do {
+            var matrix = [[1,2,3],[4,5,6],[7,8,9]]
+            LCArray().rotate(&matrix)
+            print("Rotated matrix: \(matrix)")
+            
+            matrix = [[2,29,20,26,16,28],[12,27,9,25,13,21],[32,33,32,2,28,14],[13,14,32,27,22,26],[33,1,20,7,21,7],[4,24,1,6,32,34]]
+            LCArray().rotate(&matrix)
+            print("Rotated matrix: \(matrix)")
+            
+            matrix = [[5,1,9,11],[2,4,8,10],[13,3,6,7],[15,14,12,16]]
+            LCArray().rotate(&matrix)
+            print("Rotated matrix: \(matrix)")
+            
+            matrix = [[2,29,20,26,16,28],[12,27,9,25,13,21],[32,33,32,2,28,14],[13,14,32,27,22,26],[33,1,20,7,21,7],[4,24,1,6,32,34]]
+            LCArray().rotate(&matrix)
+            print("Rotated matrix: \(matrix)")
+        }
+        
         exit(1)
     }
 }

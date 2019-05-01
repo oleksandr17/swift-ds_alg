@@ -1,6 +1,9 @@
 import Foundation
 
 class LCArray {
+    
+    // MARK: - Easy
+    
     /*
      https://leetcode.com/explore/interview/card/top-interview-questions-easy/92/array/727/
      */
@@ -176,6 +179,91 @@ class LCArray {
                 }
             }
             return [-1, -1]
+        }
+    }
+    
+    /*
+     https://leetcode.com/explore/interview/card/top-interview-questions-easy/92/array/769/
+     */
+    func isValidSudoku(_ board: [[Character]]) -> Bool {
+        let length = 9
+        guard board.count == length, board[0].count == length else { return false }
+        
+        // Validate rows
+        for row in 0..<length {
+            var counts = [Character: Int]()
+            for column in 0..<length {
+                counts[board[row][column], default: 0] += 1
+            }
+            guard isSudokuCountsValid(counts: counts) else { return false }
+        }
+        
+        // Validate columns
+        for column in 0..<length {
+            var counts = [Character: Int]()
+            for row in 0..<length {
+                counts[board[row][column], default: 0] += 1
+            }
+            guard isSudokuCountsValid(counts: counts) else { return false }
+        }
+        
+        guard isSudokuSectionValid(board: board, rows: 0...2, columns: 0...2) else { return false }
+        guard isSudokuSectionValid(board: board, rows: 0...2, columns: 3...5) else { return false }
+        guard isSudokuSectionValid(board: board, rows: 0...2, columns: 6...8) else { return false }
+        
+        guard isSudokuSectionValid(board: board, rows: 3...5, columns: 0...2) else { return false }
+        guard isSudokuSectionValid(board: board, rows: 3...5, columns: 3...5) else { return false }
+        guard isSudokuSectionValid(board: board, rows: 3...5, columns: 6...8) else { return false }
+        
+        guard isSudokuSectionValid(board: board, rows: 6...8, columns: 0...2) else { return false }
+        guard isSudokuSectionValid(board: board, rows: 6...8, columns: 3...5) else { return false }
+        guard isSudokuSectionValid(board: board, rows: 6...8, columns: 6...8) else { return false }
+        
+        return true
+    }
+    
+    private func isSudokuSectionValid(board: [[Character]], rows: ClosedRange<Int>, columns: ClosedRange<Int>) -> Bool {
+        var counts = [Character: Int]()
+        for row in rows {
+            for column in columns {
+                counts[board[row][column], default: 0] += 1
+            }
+        }
+        return isSudokuCountsValid(counts: counts)
+    }
+    
+    private func isSudokuCountsValid(counts: [Character: Int]) -> Bool {
+        for (value, count) in counts {
+            guard value != "." else { continue }
+            guard count == 1 else { return false }
+        }
+        return true
+    }
+    
+    /*
+     https://leetcode.com/explore/interview/card/top-interview-questions-easy/92/array/770/
+     */
+    func rotate(_ matrix: inout [[Int]]) {
+        let count = matrix.count
+        guard count > 1 else { return } // minimum matrix must be 2 x 2
+        
+        var depth = 0
+        while true {
+            guard depth <= Int(floor(Float(count - 1) / Float(2))) else { break }
+            
+            let swapsCount = count - 1 - 2*depth
+            for swapIndex in 0..<swapsCount {
+                let first = matrix[depth][depth + swapIndex]
+                let second = matrix[depth + swapIndex][depth + swapsCount]
+                let third = matrix[depth + swapsCount][depth + swapsCount - swapIndex]
+                let fourth = matrix[depth + swapsCount - swapIndex][depth]
+                
+                matrix[depth][depth + swapIndex] = fourth
+                matrix[depth + swapIndex][depth + swapsCount] = first
+                matrix[depth + swapsCount][depth + swapsCount - swapIndex] = second
+                matrix[depth + swapsCount - swapIndex][depth] = third
+            }
+            depth += 1
         }
     }
 }
