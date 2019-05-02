@@ -161,6 +161,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             print("Rotated matrix: \(matrix)")
         }
         
+        do {
+            let value = -12345
+            print("Reversed integer value \(value): \(LCStrings().reverse(value))")
+        }
+        
         exit(1)
     }
 }

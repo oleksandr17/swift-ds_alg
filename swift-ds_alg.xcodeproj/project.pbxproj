@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1106CC6B227AC09700945942 /* LCStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1106CC6A227AC09700945942 /* LCStrings.swift */; };
 		11317F9A225C6AAB00FEE0D3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11317F99225C6AAB00FEE0D3 /* AppDelegate.swift */; };
 		11317FA1225C6AAD00FEE0D3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11317FA0225C6AAD00FEE0D3 /* Assets.xcassets */; };
 		11317FB8225C6B2100FEE0D3 /* Memoization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11317FAB225C6B2100FEE0D3 /* Memoization.swift */; };
@@ -39,6 +40,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1106CC6A227AC09700945942 /* LCStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LCStrings.swift; sourceTree = "<group>"; };
 		11317F96225C6AAB00FEE0D3 /* swift-ds_alg.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "swift-ds_alg.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		11317F99225C6AAB00FEE0D3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		11317FA0225C6AAD00FEE0D3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -167,6 +169,7 @@
 			isa = PBXGroup;
 			children = (
 				11AFBC9522684BB900B8CF32 /* LCArray.swift */,
+				1106CC6A227AC09700945942 /* LCStrings.swift */,
 			);
 			path = TopInterviewQuestions;
 			sourceTree = "<group>";
@@ -276,6 +279,7 @@
 				11317FC1225C6B2100FEE0D3 /* Coordinate.swift in Sources */,
 				11317FC4225C6B2100FEE0D3 /* Queue.swift in Sources */,
 				11317FC0225C6B2100FEE0D3 /* ListNode.swift in Sources */,
+				1106CC6B227AC09700945942 /* LCStrings.swift in Sources */,
 				118D661922610CAE00FF01DD /* Character+Ascii.swift in Sources */,
 				118D661B2262110800FF01DD /* HRSorting.swift in Sources */,
 				118D662C226458EC00FF01DD /* Trie.swift in Sources */,
