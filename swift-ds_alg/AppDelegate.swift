@@ -165,6 +165,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             let value = -12345
             print("Reversed integer value \(value): \(LCStrings().reverse(value))")
         }
+
+        do {
+            let str = "A man, a plan, a canal: Panama"
+            print("Is palindrome \(str): \(LCStrings().isPalindrome(str))")
+        }
         
         exit(1)
     }

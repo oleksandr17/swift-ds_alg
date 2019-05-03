@@ -39,4 +39,56 @@ class LCStrings {
         
         return x < 0 ? -result : result
     }
+    
+    /*
+     https://leetcode.com/explore/interview/card/top-interview-questions-easy/127/strings/881/
+     */
+    func firstUniqChar(_ s: String) -> Int {
+        let counts = s.reduce(into: [Character: Int]()) { (result, c) in
+            result[c, default: 0] += 1
+        }
+        
+        for i in 0..<s.count {
+            let index = String.Index(encodedOffset: i)
+            let character = s[index]
+            guard let count = counts[character] else { fatalError() }
+            if count == 1 {
+                return i
+            }
+        }
+        return -1
+    }
+    
+    /*
+     https://leetcode.com/explore/interview/card/top-interview-questions-easy/127/strings/882/
+     */
+    func isAnagram(_ s: String, _ t: String) -> Bool {
+        return anagramSignature(s) == anagramSignature(t)
+    }
+    
+    private func anagramSignature(_ s: String) -> [Character: Int] {
+        return s.reduce(into: [Character: Int]()) { (result, c) in
+            result[c, default: 0] += 1
+        }
+    }
+    
+    /*
+     https://leetcode.com/explore/interview/card/top-interview-questions-easy/127/strings/883/
+     */
+    func isPalindrome(_ s: String) -> Bool {
+        guard !s.isEmpty else { return true }
+        
+        let str = s.filter { (c) -> Bool in
+            return "abcdefghijklmnopqrstuvwxyz0123456789".contains(String(c).lowercased())
+        }.lowercased()
+        
+        var start = 0
+        var end = str.count - 1
+        while start <= end {
+            guard str[String.Index(encodedOffset: start)] == str[String.Index(encodedOffset: end)] else { return false }
+            start += 1
+            end -= 1
+        }
+        return true
+    }
 }
