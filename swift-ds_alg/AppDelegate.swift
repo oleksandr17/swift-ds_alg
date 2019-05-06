@@ -171,6 +171,29 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             print("Is palindrome \(str): \(LCStrings().isPalindrome(str))")
         }
         
+        do {
+            var str = "42"
+            print("My atoi `\(str)`: \(LCStrings().myAtoi(str))")
+            
+            str = "   -42"
+            print("My atoi `\(str)`: \(LCStrings().myAtoi(str))")
+            
+            str = "4193 with words"
+            print("My atoi `\(str)`: \(LCStrings().myAtoi(str))")
+            
+            str = "words and 987"
+            print("My atoi `\(str)`: \(LCStrings().myAtoi(str))")
+            
+            str = "-91283472332"
+            print("My atoi `\(str)`: \(LCStrings().myAtoi(str))")
+            
+            str = "+1"
+            print("My atoi `\(str)`: \(LCStrings().myAtoi(str))")
+            
+            str = "2147483646"
+            print("My atoi `\(str)`: \(LCStrings().myAtoi(str))")
+        }
+        
         exit(1)
     }
 }
