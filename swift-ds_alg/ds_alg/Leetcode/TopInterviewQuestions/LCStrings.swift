@@ -157,4 +157,88 @@ class LCStrings {
         default: return nil
         }
     }
+    
+    /*
+     https://leetcode.com/explore/interview/card/top-interview-questions-easy/127/strings/885/
+     */
+    func strStr(_ haystack: String, _ needle: String) -> Int {
+        /*
+         Time complexity: O((n-m) * m)
+         Space complexity: O(1)
+         
+         KMP is more efficient approach (https://en.wikipedia.org/wiki/Knuth–Morris–Pratt_algorithm), it allows to achive O(n) time complexity.
+         */
+        guard !needle.isEmpty else { return 0 }
+        guard haystack.count >= needle.count else { return -1 }
+        
+        let shiftsCount = haystack.count - needle.count + 1
+        for shift in 0..<shiftsCount {
+            var isSubstring = true
+            for offset in 0..<needle.count {
+                let haystackCharacter = haystack[String.Index(encodedOffset: shift + offset)]
+                let needleCharacter = needle[String.Index(encodedOffset: offset)]
+                guard haystackCharacter == needleCharacter else {
+                    isSubstring = false
+                    break
+                }
+            }
+            if isSubstring {
+                return shift
+            }
+        }
+        
+        return -1
+    }
+    
+    /*
+     https://leetcode.com/explore/interview/card/top-interview-questions-easy/127/strings/886/
+     */
+    func countAndSay(_ n: Int) -> String {
+        guard n > 0 else { return "" }
+        
+        var result = "1"
+        for _ in 1..<n {
+            let tmpResult = result
+            result = ""
+            
+            var currentDigitCounter = 1
+            var currentDigit = tmpResult[String.Index(encodedOffset: 0)]
+            for i in 1..<tmpResult.count {
+                let digit = tmpResult[String.Index(encodedOffset: i)]
+                if currentDigit == digit {
+                    currentDigitCounter += 1
+                } else {
+                    result += "\(currentDigitCounter)\(currentDigit)"
+                    currentDigit = digit
+                    currentDigitCounter = 1
+                }
+            }
+            result += "\(currentDigitCounter)\(currentDigit)"
+        }
+        
+        return result
+    }
+    
+    /*
+     https://leetcode.com/explore/interview/card/top-interview-questions-easy/127/strings/887/
+     */
+    func longestCommonPrefix(_ strs: [String]) -> String {
+        guard strs.count > 0 else { return "" }
+        
+        let length = strs.reduce(strs[0].count) { (result, str) -> Int in
+            return min(result, str.count)
+        }
+        
+        var prefix = ""
+        for i in 0..<length {
+            let charIndex = String.Index(encodedOffset: i)
+            let firstStrChar = strs[0][charIndex]
+            for j in 1..<strs.count {
+                guard strs[j][charIndex] == firstStrChar else { return prefix }
+            }
+            prefix += String(firstStrChar)
+        }
+        
+        return prefix
+    }
 }

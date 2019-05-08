@@ -194,6 +194,30 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             print("My atoi `\(str)`: \(LCStrings().myAtoi(str))")
         }
         
+        do {
+            var haystack = "a"
+            var needle = "a"
+            print("Index of `\(needle)` in `\(haystack)`: \(LCStrings().strStr(haystack, needle))")
+            
+            haystack = "mississippi"
+            needle = "issip"
+            print("Index of `\(needle)` in `\(haystack)`: \(LCStrings().strStr(haystack, needle))")
+            
+            haystack = "mississippi"
+            needle = "issipi"
+            print("Index of `\(needle)` in `\(haystack)`: \(LCStrings().strStr(haystack, needle))")
+        }
+        
+        do {
+            let n = 1
+            print("Count and say `\(n)`: \(LCStrings().countAndSay(n))")
+        }
+        
+        do {
+            let strings = ["flower","flow","flight"]
+            print("Longest common prefix of \(strings): \(LCStrings().longestCommonPrefix(strings))")
+        }
+        
         exit(1)
     }
 }
