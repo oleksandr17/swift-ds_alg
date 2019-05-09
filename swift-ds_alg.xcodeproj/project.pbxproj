@@ -35,6 +35,7 @@
 		118D66262264584A00FF01DD /* TreeNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118D66252264584A00FF01DD /* TreeNode.swift */; };
 		118D662C226458EC00FF01DD /* Trie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118D662B226458EC00FF01DD /* Trie.swift */; };
 		118D662E2264590600FF01DD /* MinStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118D662D2264590600FF01DD /* MinStack.swift */; };
+		11910E862283FBD600A6D6AF /* LCLinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11910E852283FBD600A6D6AF /* LCLinkedList.swift */; };
 		11AFBC9622684BB900B8CF32 /* LCArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11AFBC9522684BB900B8CF32 /* LCArray.swift */; };
 		11EE4A92225FC1CD006E86E4 /* HRHashTables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11EE4A91225FC1CD006E86E4 /* HRHashTables.swift */; };
 /* End PBXBuildFile section */
@@ -71,6 +72,7 @@
 		118D66252264584A00FF01DD /* TreeNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreeNode.swift; sourceTree = "<group>"; };
 		118D662B226458EC00FF01DD /* Trie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trie.swift; sourceTree = "<group>"; };
 		118D662D2264590600FF01DD /* MinStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinStack.swift; sourceTree = "<group>"; };
+		11910E852283FBD600A6D6AF /* LCLinkedList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LCLinkedList.swift; sourceTree = "<group>"; };
 		11AFBC9522684BB900B8CF32 /* LCArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LCArray.swift; sourceTree = "<group>"; };
 		11EE4A91225FC1CD006E86E4 /* HRHashTables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HRHashTables.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -170,6 +172,7 @@
 			children = (
 				11AFBC9522684BB900B8CF32 /* LCArray.swift */,
 				1106CC6A227AC09700945942 /* LCStrings.swift */,
+				11910E852283FBD600A6D6AF /* LCLinkedList.swift */,
 			);
 			path = TopInterviewQuestions;
 			sourceTree = "<group>";
@@ -280,6 +283,7 @@
 				11317FC4225C6B2100FEE0D3 /* Queue.swift in Sources */,
 				11317FC0225C6B2100FEE0D3 /* ListNode.swift in Sources */,
 				1106CC6B227AC09700945942 /* LCStrings.swift in Sources */,
+				11910E862283FBD600A6D6AF /* LCLinkedList.swift in Sources */,
 				118D661922610CAE00FF01DD /* Character+Ascii.swift in Sources */,
 				118D661B2262110800FF01DD /* HRSorting.swift in Sources */,
 				118D662C226458EC00FF01DD /* Trie.swift in Sources */,
