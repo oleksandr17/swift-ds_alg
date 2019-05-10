@@ -40,4 +40,56 @@ class LCLinkedList {
         
         return head
     }
+    
+    /*
+     https://leetcode.com/explore/interview/card/top-interview-questions-easy/93/linked-list/772/
+     */
+    func isPalindrome(_ head: ListNode?) -> Bool {
+        guard let head = head else { return true }
+        guard head.next != nil else { return true }
+        
+        let middle = findMiddleNode(head)
+        let anotherHead = reverseList(middle.next!)
+        middle.next = nil
+        
+        return compare(head1: head, head2: anotherHead)
+    }
+    
+    private func findMiddleNode(_ head: ListNode) -> ListNode {
+        var slow = head
+        var fast = head
+        while fast.next?.next != nil {
+            slow = slow.next!
+            fast = fast.next!.next!
+        }
+        return slow
+    }
+    
+    private func reverseList(_ head: ListNode) -> ListNode {
+        var node: ListNode? = head
+        var next = head.next
+        node?.next = nil
+        
+        while next != nil {
+            let tmp = next?.next
+            next?.next = node
+            node = next
+            next = tmp
+        }
+        return node!
+    }
+    
+    private func compare(head1: ListNode, head2: ListNode) -> Bool {
+        var node1: ListNode? = head1
+        var node2: ListNode? = head2
+        
+        while node2 != nil {
+            guard let val1 = node1?.val, let val2 = node2?.val else { fatalError("Nodes can't be NULL") }
+            guard val1 == val2 else { return false }
+            node1 = node1?.next
+            node2 = node2?.next
+        }
+        
+        return true
+    }
 }

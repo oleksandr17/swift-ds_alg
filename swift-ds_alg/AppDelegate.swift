@@ -218,6 +218,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             print("Longest common prefix of \(strings): \(LCStrings().longestCommonPrefix(strings))")
         }
         
+        do {
+            let head = ListNode(1)
+            var node = head
+            node.next = ListNode(0)
+            node = node.next!
+            node.next = ListNode(3)
+            node = node.next!
+            node.next = ListNode(0)
+            node = node.next!
+            node.next = ListNode(1)
+            print("Is palindrome: \(LCLinkedList().isPalindrome(head))")
+        }
+        
         exit(1)
     }
 }
