@@ -38,6 +38,7 @@
 		11910E862283FBD600A6D6AF /* LCLinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11910E852283FBD600A6D6AF /* LCLinkedList.swift */; };
 		11AFBC9622684BB900B8CF32 /* LCArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11AFBC9522684BB900B8CF32 /* LCArray.swift */; };
 		11EE4A92225FC1CD006E86E4 /* HRHashTables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11EE4A91225FC1CD006E86E4 /* HRHashTables.swift */; };
+		11F1CFA9228947140049DECE /* LCTrees.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F1CFA8228947140049DECE /* LCTrees.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -75,6 +76,7 @@
 		11910E852283FBD600A6D6AF /* LCLinkedList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LCLinkedList.swift; sourceTree = "<group>"; };
 		11AFBC9522684BB900B8CF32 /* LCArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LCArray.swift; sourceTree = "<group>"; };
 		11EE4A91225FC1CD006E86E4 /* HRHashTables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HRHashTables.swift; sourceTree = "<group>"; };
+		11F1CFA8228947140049DECE /* LCTrees.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LCTrees.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,6 +175,7 @@
 				11AFBC9522684BB900B8CF32 /* LCArray.swift */,
 				1106CC6A227AC09700945942 /* LCStrings.swift */,
 				11910E852283FBD600A6D6AF /* LCLinkedList.swift */,
+				11F1CFA8228947140049DECE /* LCTrees.swift */,
 			);
 			path = TopInterviewQuestions;
 			sourceTree = "<group>";
@@ -293,6 +296,7 @@
 				11EE4A92225FC1CD006E86E4 /* HRHashTables.swift in Sources */,
 				114EB231225DBE9600C341C1 /* HRArrays.swift in Sources */,
 				118D662E2264590600FF01DD /* MinStack.swift in Sources */,
+				11F1CFA9228947140049DECE /* LCTrees.swift in Sources */,
 				11317FBF225C6B2100FEE0D3 /* Stack.swift in Sources */,
 				11317FC3225C6B2100FEE0D3 /* ReverseArray.swift in Sources */,
 				118D66232263705D00FF01DD /* HRGreedyAlgorithms.swift in Sources */,

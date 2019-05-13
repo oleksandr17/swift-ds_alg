@@ -231,6 +231,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             print("Is palindrome: \(LCLinkedList().isPalindrome(head))")
         }
         
+        do {
+            let arr = [-10,-3,0,5,9]
+            print("Sorted array to BST \(arr): root is \(String(describing: LCTrees().sortedArrayToBST([-10,-3,0,5,9])?.val))")
+        }
+        
         exit(1)
     }
 }
