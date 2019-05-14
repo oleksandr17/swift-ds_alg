@@ -236,6 +236,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             print("Sorted array to BST \(arr): root is \(String(describing: LCTrees().sortedArrayToBST([-10,-3,0,5,9])?.val))")
         }
         
+        do {
+            var arr1 = [1,2,3,0,0,0]
+            let arr2 = [2,5,6]
+            print("Merge \(arr2) into \(arr1):")
+            LCSortingAndSearching().merge(&arr1, 3, arr2, arr2.count)
+            print("--> \(arr1)")
+        }
+        
         exit(1)
     }
 }
