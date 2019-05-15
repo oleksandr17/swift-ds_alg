@@ -27,6 +27,7 @@
 		113B8F3422781B3200A16173 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 113B8F3322781B3200A16173 /* Default-568h@2x.png */; };
 		114EB231225DBE9600C341C1 /* HRArrays.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114EB230225DBE9600C341C1 /* HRArrays.swift */; };
 		116D4ABF228A951800FD54CF /* LCSortingAndSearching.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116D4ABE228A951800FD54CF /* LCSortingAndSearching.swift */; };
+		116D4AC7228BE34300FD54CF /* LCDynamicProgramming.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116D4AC6228BE34300FD54CF /* LCDynamicProgramming.swift */; };
 		118D661922610CAE00FF01DD /* Character+Ascii.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118D661822610CAE00FF01DD /* Character+Ascii.swift */; };
 		118D661B2262110800FF01DD /* HRSorting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118D661A2262110800FF01DD /* HRSorting.swift */; };
 		118D661D22624C8A00FF01DD /* Array+QuickSort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118D661C22624C8A00FF01DD /* Array+QuickSort.swift */; };
@@ -66,6 +67,7 @@
 		113B8F3322781B3200A16173 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		114EB230225DBE9600C341C1 /* HRArrays.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HRArrays.swift; sourceTree = "<group>"; };
 		116D4ABE228A951800FD54CF /* LCSortingAndSearching.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LCSortingAndSearching.swift; sourceTree = "<group>"; };
+		116D4AC6228BE34300FD54CF /* LCDynamicProgramming.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LCDynamicProgramming.swift; sourceTree = "<group>"; };
 		118D661822610CAE00FF01DD /* Character+Ascii.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Character+Ascii.swift"; sourceTree = "<group>"; };
 		118D661A2262110800FF01DD /* HRSorting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HRSorting.swift; sourceTree = "<group>"; };
 		118D661C22624C8A00FF01DD /* Array+QuickSort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+QuickSort.swift"; sourceTree = "<group>"; };
@@ -179,6 +181,7 @@
 				11910E852283FBD600A6D6AF /* LCLinkedList.swift */,
 				11F1CFA8228947140049DECE /* LCTrees.swift */,
 				116D4ABE228A951800FD54CF /* LCSortingAndSearching.swift */,
+				116D4AC6228BE34300FD54CF /* LCDynamicProgramming.swift */,
 			);
 			path = TopInterviewQuestions;
 			sourceTree = "<group>";
@@ -297,6 +300,7 @@
 				118D6621226351B200FF01DD /* HRSearch.swift in Sources */,
 				11317FCD225C6E9E00FEE0D3 /* HRWarmUp.swift in Sources */,
 				11317FB8225C6B2100FEE0D3 /* Memoization.swift in Sources */,
+				116D4AC7228BE34300FD54CF /* LCDynamicProgramming.swift in Sources */,
 				11EE4A92225FC1CD006E86E4 /* HRHashTables.swift in Sources */,
 				114EB231225DBE9600C341C1 /* HRArrays.swift in Sources */,
 				118D662E2264590600FF01DD /* MinStack.swift in Sources */,

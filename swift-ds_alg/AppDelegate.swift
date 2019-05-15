@@ -244,6 +244,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             print("--> \(arr1)")
         }
         
+        do {
+            let arr = [7,1,5,3,6,4]
+            print("Max profit of \(arr): \(LCDynamicProgramming().maxProfit(arr))")
+        }
+        
         exit(1)
     }
 }
