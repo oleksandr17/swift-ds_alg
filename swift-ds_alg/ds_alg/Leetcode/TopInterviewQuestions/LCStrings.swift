@@ -241,4 +241,17 @@ class LCStrings {
         
         return prefix
     }
+    
+    func groupAnagrams(_ strs: [String]) -> [[String]] {
+        var values = [String: Array<String>]()
+        for str in strs {
+            values[String(str.sorted()), default: Array<String>()].append(str)
+        }
+        
+        var result = [[String]]()
+        for (_, value) in values {
+            result.append(value)
+        }
+        return result
+    }
 }

@@ -1,6 +1,6 @@
 import Foundation
 
-class MyCircularQueue {
+class CircularQueue {
     private var values: [Int]
     private var capacity: Int
     private var head: Int
