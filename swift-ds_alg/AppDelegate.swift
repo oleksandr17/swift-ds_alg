@@ -249,6 +249,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             print("Max profit of \(arr): \(LCDynamicProgramming().maxProfit(arr))")
         }
         
+        do {
+            let hashSet = HashSet()
+            hashSet.add(1)
+            hashSet.add(2)
+            hashSet.contains(1)
+            hashSet.contains(3)
+            hashSet.add(2)
+            hashSet.contains(2)
+            hashSet.remove(2)
+            hashSet.contains(2)
+        }
+        
         exit(1)
     }
 }
