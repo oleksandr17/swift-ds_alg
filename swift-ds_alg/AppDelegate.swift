@@ -261,6 +261,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             hashSet.contains(2)
         }
         
+        do {
+            let arr = [-1,0,1,2,-1,-4]
+            print("3 sum of \(arr): \(LCArrayAndStrings().threeSum(arr))")
+        }
+        
         exit(1)
     }
 }
