@@ -40,6 +40,7 @@
 		11B48109229BB66000A87E94 /* HashSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B48108229BB66000A87E94 /* HashSet.swift */; };
 		11B4810B229BEA8700A87E94 /* LCArrayAndStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B4810A229BEA8700A87E94 /* LCArrayAndStrings.swift */; };
 		11B4810D229BEC5C00A87E94 /* MapSum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B4810C229BEC5C00A87E94 /* MapSum.swift */; };
+		11B4ADC322A0304900004314 /* Array+Digits.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B4ADC222A0304900004314 /* Array+Digits.swift */; };
 		11EE4A92225FC1CD006E86E4 /* HRHashTables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11EE4A91225FC1CD006E86E4 /* HRHashTables.swift */; };
 		11F1CFA9228947140049DECE /* LCTrees.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F1CFA8228947140049DECE /* LCTrees.swift */; };
 /* End PBXBuildFile section */
@@ -81,6 +82,7 @@
 		11B48108229BB66000A87E94 /* HashSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HashSet.swift; sourceTree = "<group>"; };
 		11B4810A229BEA8700A87E94 /* LCArrayAndStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LCArrayAndStrings.swift; sourceTree = "<group>"; };
 		11B4810C229BEC5C00A87E94 /* MapSum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapSum.swift; sourceTree = "<group>"; };
+		11B4ADC222A0304900004314 /* Array+Digits.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Digits.swift"; sourceTree = "<group>"; };
 		11EE4A91225FC1CD006E86E4 /* HRHashTables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HRHashTables.swift; sourceTree = "<group>"; };
 		11F1CFA8228947140049DECE /* LCTrees.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LCTrees.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -128,6 +130,7 @@
 		11317FC5225C6B2500FEE0D3 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				11B4ADC222A0304900004314 /* Array+Digits.swift */,
 				118D661C22624C8A00FF01DD /* Array+QuickSort.swift */,
 				118D661822610CAE00FF01DD /* Character+Ascii.swift */,
 				11317FB4225C6B2100FEE0D3 /* Coordinate.swift */,
@@ -291,6 +294,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11B4ADC322A0304900004314 /* Array+Digits.swift in Sources */,
 				11317FC1225C6B2100FEE0D3 /* Coordinate.swift in Sources */,
 				11317FC4225C6B2100FEE0D3 /* CircularQueue.swift in Sources */,
 				11317FC0225C6B2100FEE0D3 /* ListNode.swift in Sources */,

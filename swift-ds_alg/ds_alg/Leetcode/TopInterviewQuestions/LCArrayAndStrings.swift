@@ -578,4 +578,64 @@ class LCArrayAndStrings {
             return Array(result.values)
         }
     }
+    
+    /*
+     https://leetcode.com/explore/interview/card/top-interview-questions-medium/103/array-and-strings/777/
+     */
+    func setZeroes(_ matrix: inout [[Int]]) {
+        /*
+         Time Complexity: O(M*N)
+         Space Complexity: O(1)
+         */
+        
+        // Input validation
+        let rows = matrix.count
+        guard rows > 0 else { return }
+        let columns = matrix[0].count
+        
+        // Use the first column and the first row to track if a row/column should be set to 0.
+        var resetFirstRow = false
+        var resetFirstColumn = false
+        
+        for row in 0..<rows {
+            for column in 0..<columns {
+                guard matrix[row][column] == 0 else { continue }
+                matrix[row][0] = 0
+                matrix[0][column] = 0
+                if row == 0 {
+                    resetFirstRow = true
+                }
+                if column == 0 {
+                    resetFirstColumn = true
+                }
+            }
+        }
+        
+        // Set values to 0
+        for row in 1..<rows {
+            guard matrix[row][0] == 0 else { continue }
+            for column in 0..<columns {
+                matrix[row][column] = 0
+            }
+        }
+        
+        for column in 1..<columns {
+            guard matrix[0][column] == 0 else { continue }
+            for row in 0..<rows {
+                matrix[row][column] = 0
+            }
+        }
+        
+        if resetFirstColumn {
+            for row in 0..<rows {
+                matrix[row][0] = 0
+            }
+        }
+        
+        if resetFirstRow {
+            for column in 0..<columns {
+                matrix[0][column] = 0
+            }
+        }
+    }
 }

@@ -1,6 +1,9 @@
 import Foundation
 
 class LCLinkedList {
+    
+    // MARK: - Easy
+    
     /*
      https://leetcode.com/explore/interview/card/top-interview-questions-easy/93/linked-list/603/
      */
@@ -91,5 +94,42 @@ class LCLinkedList {
         }
         
         return true
+    }
+    
+    // MARK: - Medium
+    
+    /*
+     https://leetcode.com/explore/interview/card/top-interview-questions-medium/107/linked-list/783/
+     */
+    func addTwoNumbers(_ l1: ListNode?, _ l2: ListNode?) -> ListNode? {
+        var left = l1
+        var right = l2
+        var remainder = 0
+        var node: ListNode?
+        var firstNode: ListNode?
+        while left != nil || right != nil {
+            let value = (left?.val ?? 0) + (right?.val ?? 0) + remainder
+            let digit = value % 10
+            remainder = value / 10
+            
+            left = left?.next
+            right = right?.next
+            
+            let newNode = ListNode(digit)
+            node?.next = newNode
+            node = newNode
+            
+            if firstNode == nil {
+                firstNode = newNode
+            }
+        }
+        
+        if remainder > 0 {
+            let newNode = ListNode(remainder)
+            node?.next = newNode
+            node = newNode
+        }
+        
+        return firstNode
     }
 }

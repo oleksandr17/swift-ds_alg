@@ -2,9 +2,7 @@ import UIKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-    
     var window: UIWindow?
-    
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         do {
@@ -264,6 +262,40 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         do {
             let arr = [-1,0,1,2,-1,-4]
             print("3 sum of \(arr): \(LCArrayAndStrings().threeSum(arr))")
+        }
+        
+        do {
+            var arr = [[0,1,2,0],[3,4,5,2],[1,3,1,5]]
+            print("Set Matrix Zeroes \(arr):")
+            LCArrayAndStrings().setZeroes(&arr)
+            print(arr)
+            
+            arr = [[1,0,3]]
+            print("Set Matrix Zeroes \(arr):")
+            LCArrayAndStrings().setZeroes(&arr)
+            print(arr)
+        }
+        
+        do {
+            let head1 = ListNode(2)
+            head1.next = ListNode(4)
+            head1.next!.next = ListNode(3)
+            
+            let head2 = ListNode(5)
+            head2.next = ListNode(6)
+            head2.next!.next = ListNode(4)
+            
+            let result = LCLinkedList().addTwoNumbers(head1, head2)
+            print("Add Two Numbers: \(String(describing: result?.values()))")
+        }
+        
+        do {
+            let arr = [1,3,5]
+            let number = arr.toNumber()
+            print("Digits \(arr) to number: \(number)")
+            print("Number \(number) to digits: \(Array(number: number))")
+            let otherArr = [9,9,9,9]
+            print("Sum \(arr) with \(otherArr): \(arr.sum(other: otherArr))")
         }
         
         exit(1)
