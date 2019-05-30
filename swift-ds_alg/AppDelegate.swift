@@ -129,7 +129,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         
         do {
-            let isValidSudoku = LCArray().isValidSudoku([
+            let isValidSudoku = LCArrayAndStrings().isValidSudoku([
                 ["8","3",".",".","7",".",".",".","."],
                 ["6",".",".","1","9","5",".",".","."],
                 [".","9","8",".",".",".",".","6","."],
@@ -145,77 +145,77 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         do {
             var matrix = [[1,2,3],[4,5,6],[7,8,9]]
-            LCArray().rotate(&matrix)
+            LCArrayAndStrings().rotate(&matrix)
             print("Rotated matrix: \(matrix)")
             
             matrix = [[2,29,20,26,16,28],[12,27,9,25,13,21],[32,33,32,2,28,14],[13,14,32,27,22,26],[33,1,20,7,21,7],[4,24,1,6,32,34]]
-            LCArray().rotate(&matrix)
+            LCArrayAndStrings().rotate(&matrix)
             print("Rotated matrix: \(matrix)")
             
             matrix = [[5,1,9,11],[2,4,8,10],[13,3,6,7],[15,14,12,16]]
-            LCArray().rotate(&matrix)
+            LCArrayAndStrings().rotate(&matrix)
             print("Rotated matrix: \(matrix)")
             
             matrix = [[2,29,20,26,16,28],[12,27,9,25,13,21],[32,33,32,2,28,14],[13,14,32,27,22,26],[33,1,20,7,21,7],[4,24,1,6,32,34]]
-            LCArray().rotate(&matrix)
+            LCArrayAndStrings().rotate(&matrix)
             print("Rotated matrix: \(matrix)")
         }
         
         do {
             let value = -12345
-            print("Reversed integer value \(value): \(LCStrings().reverse(value))")
+            print("Reversed integer value \(value): \(LCArrayAndStrings().reverse(value))")
         }
 
         do {
             let str = "A man, a plan, a canal: Panama"
-            print("Is palindrome \(str): \(LCStrings().isPalindrome(str))")
+            print("Is palindrome \(str): \(LCArrayAndStrings().isPalindrome(str))")
         }
         
         do {
             var str = "42"
-            print("My atoi `\(str)`: \(LCStrings().myAtoi(str))")
+            print("My atoi `\(str)`: \(LCArrayAndStrings().myAtoi(str))")
             
             str = "   -42"
-            print("My atoi `\(str)`: \(LCStrings().myAtoi(str))")
+            print("My atoi `\(str)`: \(LCArrayAndStrings().myAtoi(str))")
             
             str = "4193 with words"
-            print("My atoi `\(str)`: \(LCStrings().myAtoi(str))")
+            print("My atoi `\(str)`: \(LCArrayAndStrings().myAtoi(str))")
             
             str = "words and 987"
-            print("My atoi `\(str)`: \(LCStrings().myAtoi(str))")
+            print("My atoi `\(str)`: \(LCArrayAndStrings().myAtoi(str))")
             
             str = "-91283472332"
-            print("My atoi `\(str)`: \(LCStrings().myAtoi(str))")
+            print("My atoi `\(str)`: \(LCArrayAndStrings().myAtoi(str))")
             
             str = "+1"
-            print("My atoi `\(str)`: \(LCStrings().myAtoi(str))")
+            print("My atoi `\(str)`: \(LCArrayAndStrings().myAtoi(str))")
             
             str = "2147483646"
-            print("My atoi `\(str)`: \(LCStrings().myAtoi(str))")
+            print("My atoi `\(str)`: \(LCArrayAndStrings().myAtoi(str))")
         }
         
         do {
             var haystack = "a"
             var needle = "a"
-            print("Index of `\(needle)` in `\(haystack)`: \(LCStrings().strStr(haystack, needle))")
+            print("Index of `\(needle)` in `\(haystack)`: \(LCArrayAndStrings().strStr(haystack, needle))")
             
             haystack = "mississippi"
             needle = "issip"
-            print("Index of `\(needle)` in `\(haystack)`: \(LCStrings().strStr(haystack, needle))")
+            print("Index of `\(needle)` in `\(haystack)`: \(LCArrayAndStrings().strStr(haystack, needle))")
             
             haystack = "mississippi"
             needle = "issipi"
-            print("Index of `\(needle)` in `\(haystack)`: \(LCStrings().strStr(haystack, needle))")
+            print("Index of `\(needle)` in `\(haystack)`: \(LCArrayAndStrings().strStr(haystack, needle))")
         }
         
         do {
             let n = 1
-            print("Count and say `\(n)`: \(LCStrings().countAndSay(n))")
+            print("Count and say `\(n)`: \(LCArrayAndStrings().countAndSay(n))")
         }
         
         do {
             let strings = ["flower","flow","flight"]
-            print("Longest common prefix of \(strings): \(LCStrings().longestCommonPrefix(strings))")
+            print("Longest common prefix of \(strings): \(LCArrayAndStrings().longestCommonPrefix(strings))")
         }
         
         do {
