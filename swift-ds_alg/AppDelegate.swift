@@ -231,7 +231,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         do {
             let arr = [-10,-3,0,5,9]
-            print("Sorted array to BST \(arr): root is \(String(describing: LCTrees().sortedArrayToBST([-10,-3,0,5,9])?.val))")
+            print("Sorted array to BST \(arr): root is \(String(describing: LCTreesAndGraphs().sortedArrayToBST([-10,-3,0,5,9])?.val))")
         }
         
         do {
@@ -296,6 +296,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             print("Number \(number) to digits: \(Array(number: number))")
             let otherArr = [9,9,9,9]
             print("Sum \(arr) with \(otherArr): \(arr.sum(other: otherArr))")
+        }
+        
+        do {
+            let number = "23"
+            print("Letter Combinations of a Phone Number \(number): \(LCBacktracking().letterCombinations(number))")
         }
         
         exit(1)
