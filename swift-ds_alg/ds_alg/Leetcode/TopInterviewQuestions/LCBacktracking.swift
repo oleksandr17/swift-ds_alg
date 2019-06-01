@@ -28,4 +28,65 @@ class LCBacktracking {
             letterCombinations(digits: digits, depth: depth+1, input: newInput, result: &result)
         }
     }
+    
+    /*
+     https://leetcode.com/explore/interview/card/top-interview-questions-medium/109/backtracking/796/
+     */
+    func subsets(_ nums: [Int]) -> [[Int]] {
+        var result = [[Int]]()
+        guard !nums.isEmpty else { return result }
+        subsets(nums: nums, depth: 0, subset: [], result: &result)
+        return result
+    }
+    
+    private func subsets(nums: [Int], depth: Int, subset: [Int], result: inout [[Int]]) {
+        guard depth < nums.count else {
+            result.append(subset)
+            return
+        }
+        do {
+            let number = nums[depth]
+            var newSubset = Array<Int>(subset)
+            newSubset.append(number)
+            subsets(nums: nums, depth: depth+1, subset: newSubset, result: &result)
+        }
+        subsets(nums: nums, depth: depth+1, subset: subset, result: &result)
+    }
+    
+    /*
+     https://leetcode.com/explore/interview/card/top-interview-questions-medium/110/sorting-and-searching/803/
+     */
+    func merge(_ intervals: [[Int]]) -> [[Int]] {
+        /*
+         Complexity Analysis:
+         
+         Time complexity: O(n*logn) due to sorting
+         Space complexity: O(n) due to additional array for sorted intervals
+         */
+        var result = [[Int]]()
+        // Validate input
+        guard !intervals.isEmpty else { return result }
+        guard intervals.count > 1 else { return intervals }
+        
+        // Simplify algorithm by sorting intervals by start value
+        let intervalsSorted = intervals.sorted { (item1, item2) -> Bool in
+            return item1[0] < item2[0]
+        }
+        
+        // Merge overlapping intervals and store in-place
+        result.append(intervalsSorted[0])
+        for i in 1..<intervalsSorted.count {
+            let interval = intervalsSorted[i]
+            let lastInterval = result.last!
+            if interval[0] >= lastInterval[0] && interval[0] <= lastInterval[1] { // check if intervals overlap
+                _ = result.popLast()
+                let newInterval = [min(interval[0], lastInterval[0]), max(interval[1], lastInterval[1])]
+                result.append(newInterval)
+            } else {
+                result.append(interval)
+            }
+        }
+        
+        return result
+    }
 }

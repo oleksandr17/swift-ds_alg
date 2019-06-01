@@ -303,6 +303,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             print("Letter Combinations of a Phone Number \(number): \(LCBacktracking().letterCombinations(number))")
         }
         
+        do {
+            let intervals = [[1,3],[2,6],[8,10],[15,18]]
+            print("Merge Intervals \(intervals): \(LCBacktracking().merge(intervals))")
+        }
+        
         exit(1)
     }
 }
